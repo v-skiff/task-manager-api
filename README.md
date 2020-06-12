@@ -1,0 +1,12 @@
+# Usage
+- docker-compose up -d --build
+- set correct permissions for src/storage
+- if needed:
+    - get mysql-contaner ip: docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mysql
+    - add mysql-contaner ip to .env
+- php artisan migrate
+- php artisan db:seed
+- register your own user on: http://127.0.0.1:8080/api/register
+- get your bearer token on: http://127.0.0.1:8080/api/login
+- go to 127.0.0.1:8080/api/documentation for documentation
+- use Postman\Insomnia to test endpoints
